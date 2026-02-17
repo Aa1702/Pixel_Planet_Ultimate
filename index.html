@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pixel Planet Ultimate 🌍</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="correctSound">
+  <source src="assets/correct.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="wrongSound">
+  <source src="assets/wrong.mp3" type="audio/mpeg">
+</audio>
+
+<div id="fireworks"></div>
+
+<div class="window">
+  <div class="window-header">
+    Pixel Planet 🌍
+    <div class="window-controls">
+      <div id="closeBtn" class="control red" title="Close"></div>
+      <div id="minBtn" class="control yellow" title="Minimize"></div>
+      <div class="control green"></div> 
+    </div>
+  </div>
+
+  <div class="window-content">
+
+    <div id="popup" class="popup hidden">
+      <h2 id="popupTitle"></h2>
+      <p id="popupText"></p>
+      <div id="medal" class="medal"></div>
+      <div class="popup-buttons">
+        <button onclick="nextLevel()">Next</button>
+        <button onclick="showMenu()">Menu</button>
+      </div>
+    </div>
+
+    <div id="welcome">
+      <h2>Select Mode</h2>
+      <button onclick="startGame('single')">Single Player</button>
+      <button onclick="startGame('multi')">Multiplayer</button>
+    </div>
+
+    <div id="menu" class="hidden">
+      <h2>Levels</h2>
+      <div id="levelList"></div>
+      <div class="menu-controls">
+        <button onclick="startBossLevel()">Boss Level 👹</button>
+        <button onclick="resetProgress()">Reset</button>
+        <button onclick="goHome()">Home</button>
+      </div>
+    </div>
+
+    <div id="game" class="hidden">
+      <div class="game-top-bar">
+        <button onclick="backToMenu()">⬅ Back</button>
+        <button onclick="toggleMusic()">🎵 Music</button>
+      </div>
+
+      <h4 id="playerTurn" class="hidden"></h4>
+
+      <h3 id="scrambled"></h3>
+
+      <img id="flag" class="hidden" alt="Country Flag">
+
+      <input id="answer" placeholder="Your Answer" autocomplete="off">
+      <button id="submitBtn" onclick="checkAnswer()">Submit</button>
+
+      <div class="progress-wrapper">
+        <p id="progress"></p>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="countries.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+:root {
+  --window-body: #fff9fc;
+  --window-border: #ffb7b2;
+  --header-bg: #ffdac1;
+  --header-border: #ffb7b2;
+  --button-bg: #e2f0cb;
+  --button-hover: #b5ead7;
+  --button-border: #99c1b9;
+  --progress-bg: #ffe4e1;
+  --progress-fill: #ff9aa2;
+  --pixel-shadow: #888;
+  --correct-text: #55cbcd; 
+  --wrong-text: #ff6f69;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: rgba(0,0,0,0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  overflow: hidden;
+}
+
+.window {
+  width: 95%;
+  height: 95%;
+  background: var(--window-body);
+  border: 4px solid var(--window-border);
+  box-shadow: 8px 8px 0px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -webkit-app-region: drag; 
+}
+
+button, input, .window-controls, .control, #levelList button {
+  -webkit-app-region: no-drag;
+}
+
+.window-header {
+  background: var(--header-bg);
+  padding: 12px;
+  border-bottom: 4px solid var(--header-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 10px 10px 0 0;
+  color: #555;
+  font-weight: bold;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.window-content {
+  padding: 25px;
+  text-align: center;
+  overflow-y: auto;
+  flex-grow: 1;
+  position: relative; 
+}
+
+.hidden {
+  display: none !important;
+}
+
+#flag {
+  width: 140px;
+  height: auto;
+  border: 4px solid var(--window-border);
+  margin: 15px auto;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+  display: block;
+}
+
+#playerTurn {
+  color: #888;
+  margin-bottom: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+#scrambled {
+  font-size: 18px;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  min-height: 30px;
+  color: #555;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
+  padding: 12px 10px;
+  background: var(--button-bg);
+  border: 3px solid var(--button-border);
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+  color: #555;
+  border-radius: 8px;
+  font-size: 10px;
+}
+
+button:hover {
+  background: var(--button-hover);
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+button:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+input {
+  padding: 12px;
+  border: 3px solid var(--button-border);
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+  outline: none;
+  font-size: 12px;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+}
+
+.progress-wrapper {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background: var(--progress-bg);
+  border: 3px solid var(--button-border);
+  margin-top: 5px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--progress-fill);
+  transition: width 0.3s ease;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff; 
+  border: 4px solid var(--window-border);
+  padding: 25px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15); 
+  z-index: 5000;
+  text-align: center;
+  width: 85%;
+  border-radius: 15px;
+  -webkit-app-region: no-drag; 
+}
+
+.popup h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.popup p {
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.popup button {
+  -webkit-app-region: no-drag;
+  pointer-events: auto;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#levelList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 20px 0;
+}
+
+#levelList button {
+    font-size: 8px;
+    padding: 8px;
+}
+
+.menu-controls {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.game-top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.medal {
+  font-size: 50px;
+  margin: 15px 0;
+  animation: drop 0.8s ease;
+}
+
+@keyframes drop {
+  0% { transform: translateY(-200px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+#fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#fireworks div {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: gold;
+  border-radius: 50%;
+  animation: explode 1s ease forwards;
+}
+
+@keyframes explode {
+  to {
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
+
+body.popup-active .window {
+  -webkit-app-region: no-drag !important;
+}

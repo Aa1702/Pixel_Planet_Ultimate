@@ -1,0 +1,13 @@
+
+node_modules/
+
+.DS_Store
+
+out/
+dist/
+build/
+
+*.app
+*.exe
+*.dmg
+*.zip
