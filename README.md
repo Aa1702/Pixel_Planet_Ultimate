@@ -1,6 +1,6 @@
-# Pixel_Planet_Ultimate
 # Pixel Planet Ultimate 🌍
-<img width="512" height="512" alt="banner" src="https://github.com/user-attachments/assets/e02d1967-e56b-4907-ad06-21fa470109f8" />
+
+<img width="1024" height="1024" alt="banner" src="https://github.com/user-attachments/assets/ff218132-dfb8-4546-8715-d98f57a13029" />
 
 ![Game Banner](https://img.shields.io/badge/Pixel%20Planet-Ultimate-pink?style=for-the-badge) 
 ![Electron](https://img.shields.io/badge/Electron-Desktop_App-blue?style=for-the-badge&logo=electron)
@@ -13,20 +13,17 @@ Pixel Planet Ultimate is a cozy, pixel-art style geography game designed to help
 ### Single Player Mode
 A relaxing solo experience where you progress through levels at your own pace.
 
-https://github.com/user-attachments/assets/e0ee59ce-fb30-408f-9b35-2d6c20a62996
-
+https://github.com/user-attachments/assets/d39f14c2-93aa-4f83-8c60-547bc5ab7de0
 
 ### Multiplayer Mode
 A "Pass & Play" head-to-head mode to challenge friends and family.
 
-https://github.com/user-attachments/assets/70795a24-7cf2-4710-9794-09703169ab84
-
+https://github.com/user-attachments/assets/8b8c99c2-218b-42ac-a405-cd9419898709
 
 ### Boss Level
 The ultimate challenge! A high-stakes, randomized round featuring countries from across the entire globe.
 
-
-https://github.com/user-attachments/assets/472c2ece-a14d-417a-8d9f-4a79d2a6336a
+https://github.com/user-attachments/assets/be79b785-5da7-4ec3-a60c-7f6f3291306f
 
 ## 🎮 Features
 
@@ -49,7 +46,7 @@ https://github.com/user-attachments/assets/472c2ece-a14d-417a-8d9f-4a79d2a6336a
 
 1. Clone the repository
 ```bash
-   git clone https://github.com/yourusername/pixel-planet-ultimate.git
+   git clone https://github.com/Aa1702/pixel-planet-ultimate.git
    cd pixel-planet-ultimate
 ```
 2. Install Dependencies
