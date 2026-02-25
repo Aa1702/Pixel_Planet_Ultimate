@@ -9,8 +9,6 @@ A cozy pixel-art geography game that transforms learning all 195 countries into 
 ![Electron](https://img.shields.io/badge/Electron-Desktop_App-blue?style=for-the-badge&logo=electron)  
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-<img width="1024" height="1024" alt="banner" src="https://github.com/user-attachments/assets/ff218132-dfb8-4546-8715-d98f57a13029" />
-
 ---
 
 ## 📌 1. Background and Overview
